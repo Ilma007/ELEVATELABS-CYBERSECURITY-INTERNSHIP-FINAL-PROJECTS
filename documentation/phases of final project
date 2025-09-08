@@ -1,0 +1,137 @@
+🔐 Steganography Tool with Secure GUI and OTP Recovery
+📖 Phase-Wise Project Report
+Phase 1: Planning & Requirement Analysis
+
+In the first stage of the project, the focus was on identifying the requirements and scope. Steganography was selected as the core topic since it is a crucial cybersecurity domain involving information hiding. The requirements included:
+
+A GUI interface for ease of use.
+
+Password protection for secure embedding and extraction.
+
+A forgot password mechanism using OTP via email.
+
+Compatibility with image formats (PNG, BMP).
+
+Implementation in Python for portability and simplicity.
+
+The planning phase ensured clarity of objectives, time allocation, and the feasibility of completing the project within the internship duration at Elevatte Labs.
+
+Phase 2: System Design
+
+In this phase, the system’s architecture and workflow were designed. The project was divided into two main modules:
+
+Core Steganography Module (stego_tool.py) – Responsible for embedding and extracting payloads inside cover images.
+
+GUI Module (gui_stego.py) – Provides an interactive interface with options for file selection, password handling, embedding, extraction, and OTP recovery.
+
+Security was integrated at the design stage by including:
+
+Password validation (minimum 6 characters).
+
+Error messages for wrong password attempts.
+
+OTP verification for resetting forgotten passwords.
+
+A flow diagram was also conceptualized to represent how the tool functions:
+
+User selects files → Sets/enters password → Hides/extracts payload → Success/Error/Recovery flow.
+
+Phase 3: Implementation
+
+This was the development phase where coding was carried out. Python was chosen due to its simplicity and strong library support. The major tasks included:
+
+Steganography Implementation:
+
+Payload embedding inside cover images.
+
+Secure extraction only with correct password.
+
+GUI Development (Tkinter):
+
+File selection dialogs for cover image, payload, and output image.
+
+Buttons for embedding, extracting, and forgot password.
+
+Informative pop-ups for success/error handling.
+
+Password Protection:
+
+Enforced a minimum of 6 characters.
+
+Wrong password → Show error message.
+
+OTP Recovery:
+
+OTP generated using Python random library.
+
+Sent via local SMTP (aiosmtpd on port 1025).
+
+Successful OTP verification allowed password reset.
+
+This phase ensured modular code separation for easy maintenance.
+
+Phase 4: Testing & Validation
+
+Testing was performed on different scenarios to ensure robustness:
+
+Positive Test Cases:
+
+Embedding with valid password → Stego image created successfully.
+
+Extracting with correct password → Payload recovered accurately.
+
+Forgot password → OTP sent and verified successfully.
+
+Negative Test Cases:
+
+Entering a password shorter than 6 characters → Error displayed.
+
+Extracting with wrong password → System showed “Wrong Password” message.
+
+Entering invalid OTP during recovery → Error displayed, reset denied.
+
+Through testing, the system proved to be secure, reliable, and user-friendly.
+
+Phase 5: Results & Outcomes
+
+The final tool achieved all internship goals:
+
+Secure embedding and extraction of files.
+
+GUI interface making steganography accessible even to beginners.
+
+Password authentication to prevent unauthorized access.
+
+OTP-based recovery simulating real-world authentication mechanisms.
+
+Learning Outcomes:
+
+Practical understanding of steganography.
+
+Implementation of password & OTP-based security in Python.
+
+Designing and testing cybersecurity applications.
+
+Hands-on practice with GUI frameworks and SMTP email services.
+
+Phase 6: Future Enhancements
+
+While the current tool is functional, it can be improved with:
+
+AES encryption for payload before embedding.
+
+Support for JPEG steganography (using DCT).
+
+Cloud-based OTP services (e.g., Gmail API, SendGrid) instead of local SMTP.
+
+Enhanced GUI (dark theme, modern design).
+
+Logging of attempts for security audits.
+
+Phase 7: Conclusion
+
+This project successfully demonstrates how steganography can be enhanced with cybersecurity principles. The combination of data hiding, password protection, and OTP recovery highlights the importance of multi-layered security in digital communication.
+
+The internship at Elevatte Labs provided an excellent opportunity to apply theoretical knowledge to a practical problem, strengthening skills in Python programming, GUI design, and secure authentication mechanisms.
+
+The project not only fulfills internship requirements but also lays a foundation for advanced research in data hiding and cybersecurity tools.
